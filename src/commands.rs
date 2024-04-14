@@ -261,7 +261,7 @@ async fn appointment_confirmation(
     {
         save_appointment(db_pool, user_name, service_name, appointment_time)
             .await
-            .expect("Ошибка сохранения записи");
+            .expect("Error saving a record");
 
         if let Some(message) = q.message {
             bot.send_message(
